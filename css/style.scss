@@ -1,0 +1,35 @@
+@import "../css/bootstrap-theme.css";
+@import "../css/bootstrap.min.css";
+@import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
+@import "fonts";
+
+$font_1: font-family, 'Asap';
+$font_2: font-family, 'Montserrat Alternates';
+$font_3: font-family, 'Lato';
+
+header{
+  background-color: gray;
+}
+.container{
+  text-align: center;
+}
+    .col-md-12, .col-md-10, .col-md-8{
+      text-align: center;
+      background-color: #ff253a;
+      border: solid 1px black;
+    }
+.col-md-8, .col-md-10, .col-md-12{
+  float: none;
+  margin: auto;
+}
+article{
+    background-color: gray;
+}
+  .col-md-4, .col-md-3, .col-md-6 {
+    text-align: center;
+    background-color: #2b669a;
+    border: solid 1px black;
+  }
+footer{
+  text-align: center;
+}

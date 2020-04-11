@@ -1,6 +1,19 @@
+@import url(../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css);
 @import url(../css/bootstrap-theme.css);
 @import url(../css/bootstrap.min.css);
-@import url(../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css);
+@import url(../css/media.css);
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box; }
+  * p, * h1, * h2, * h3, * h4, * h5, * h6 {
+    margin: 0; }
+  * a:hover {
+    text-decoration: none; }
+
 @font-face {
   font-family: 'Asap';
   src: url("../fonts/Asap-Bold.eot");
@@ -37,11 +50,68 @@
   src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype"), url("../fonts/Lato-Regular.svg#Lato-Regular") format("svg");
   font-weight: normal;
   font-style: normal; }
-header {
-  background-color: gray; }
+.bg_top {
+  background-image: url("../images/bg_top.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .bg_top .logo {
+    padding-top: 31px; }
+  .bg_top .menu {
+    padding-top: 32px; }
+    .bg_top .menu li {
+      display: inline-block;
+      font-size: 16px;
+      font-family: font-family, "Asap";
+      text-transform: uppercase;
+      margin-left: 40px; }
+      .bg_top .menu li a {
+        color: #4d4d4d; }
+        .bg_top .menu li a:after {
+          display: block;
+          content: "";
+          width: 0;
+          height: 2px;
+          margin-top: 9px;
+          background-color: #4d4d4d;
+          transition: 0.2s; }
+      .bg_top .menu li:hover a:after {
+        width: 100%; }
+  .bg_top .connection {
+    padding-top: 177px; }
+    .bg_top .connection h1 {
+      font-family: font-family, "Asap";
+      font-weight: 500;
+      font-size: 90px;
+      color: #4d4d4d; }
+    .bg_top .connection p {
+      font-family: font-family, "Asap";
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 38px;
+      color: rgba(77, 77, 77, 0.53); }
+    .bg_top .connection a {
+      margin: 31px 20px 20px 0;
+      display: inline-block;
+      font-family: font-family, "Asap";
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+      color: #4d4d4d;
+      border: solid 1px #4d4d4d;
+      width: 160px;
+      line-height: 50px; }
+      .bg_top .connection a:hover {
+        background-color: white;
+        border: none;
+        box-shadow: -3px 17px 44px -5px rgba(5, 5, 5, 0.51);
+        transition: 0.2s; }
+  .bg_top .man_photo img {
+    max-width: 100%; }
 
-.container {
+.col-sm-9 {
   text-align: center; }
+  .col-sm-9 li {
+    margin-left: 10px; }
 
 .col-md-12, .col-md-10, .col-md-8 {
   text-align: center;
@@ -55,7 +125,7 @@ header {
 article {
   background-color: gray; }
 
-.col-md-4, .col-md-3, .col-md-6 {
+.col-md-4 {
   text-align: center;
   background-color: #2b669a;
   border: solid 1px black; }

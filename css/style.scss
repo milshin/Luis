@@ -1,35 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;
+
+  p, h1, h2, h3, h4, h5, h6 {
+    margin: 0
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+@import "fonts";
+@import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
 @import "../css/bootstrap-theme.css";
 @import "../css/bootstrap.min.css";
-@import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
-@import "fonts";
+@import "../css/media.css";
 
 $font_1: font-family, 'Asap';
 $font_2: font-family, 'Montserrat Alternates';
 $font_3: font-family, 'Lato';
 
-header{
-  background-color: gray;
-}
-.container{
-  text-align: center;
-}
-    .col-md-12, .col-md-10, .col-md-8{
-      text-align: center;
-      background-color: #ff253a;
-      border: solid 1px black;
+.bg_top {
+  background-image: url("../images/bg_top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .logo {
+    padding-top: 31px;
+  }
+
+  .menu {
+    padding-top: 32px;
+
+    li {
+      display: inline-block;
+      font-size: 16px;
+      font-family: $font_1;
+      text-transform: uppercase;
+      margin-left: 40px;
+
+      a {
+        color: #4d4d4d;
+
+        &:after {
+          display: block;
+          content: "";
+          width: 0;
+          height: 2px;
+          margin-top: 9px;
+          background-color: #4d4d4d;
+          transition: 0.2s;
+        }
+
+        //&:hover{
+        //  text-transform: capitalize;
+        //}
+      }
+
+      &:hover {
+        a:after {
+          width: 100%;
+        }
+      }
     }
-.col-md-8, .col-md-10, .col-md-12{
+  }
+
+  .connection {
+    padding-top: 177px;
+
+    h1 {
+      font-family: $font_1;
+      font-weight: 500;
+      font-size: 90px;
+      color: #4d4d4d;
+    }
+
+    p {
+      font-family: $font_1;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 38px;
+      color: rgba(77, 77, 77, .53);
+    }
+
+    a {
+      margin: 31px 20px 20px 0;
+      display: inline-block;
+      font-family: $font_1;
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+      color: #4d4d4d;
+      border: solid 1px #4d4d4d;
+      width: 160px;
+      line-height: 50px;
+
+      &:hover {
+        background-color: white;
+        border: none;
+        box-shadow: -3px 17px 44px -5px rgba(5, 5, 5, 0.51);
+        transition: 0.2s;
+      }
+    }
+  }
+
+  .man_photo {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.col-sm-9 {
+  text-align: center;
+
+  li {
+    margin-left: 10px;
+  }
+}
+
+.col-md-12, .col-md-10, .col-md-8 {
+  text-align: center;
+  background-color: #ff253a;
+  border: solid 1px black;
+}
+
+.col-md-8, .col-md-10, .col-md-12 {
   float: none;
   margin: auto;
 }
-article{
-    background-color: gray;
+
+article {
+  background-color: gray;
 }
-  .col-md-4, .col-md-3, .col-md-6 {
-    text-align: center;
-    background-color: #2b669a;
-    border: solid 1px black;
-  }
-footer{
+
+.col-md-4 {
+  text-align: center;
+  background-color: #2b669a;
+  border: solid 1px black;
+}
+
+footer {
   text-align: center;
 }

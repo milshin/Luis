@@ -1,3 +1,9 @@
+@import "fonts";
+@import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
+@import "../css/bootstrap.min.css";
+@import "../css/bootstrap-theme.css";
+@import "slick.css";
+
 * {
   padding: 0;
   margin: 0;
@@ -15,10 +21,6 @@
   }
 }
 
-@import "fonts";
-@import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
-@import "../css/bootstrap-theme.css";
-@import "../css/bootstrap.min.css";
 
 $font_1: font-family, 'Asap';
 $font_2: font-family, 'Montserrat Alternates';
@@ -38,6 +40,7 @@ $font_3: font-family, 'Lato';
   letter-spacing: 6px;
   font-weight: 700;
   font-size: 46px;
+  text-transform: uppercase;
   color: #717171;
   &:before {
     content: "";
@@ -55,33 +58,29 @@ $font_3: font-family, 'Lato';
   }
 }
 
-.bg_top {
-  background-image: url("../images/bg_top.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 
-  .logo {
-    padding-top: 31px;
-  }
+header {
+  .navbar-default {
+    background-image: none;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    -webkit-box-shadow: none;
 
-  .menu {
-    padding-top: 32px;
+    .navbar-collapse {
+      border-top: none;
+    }
 
-    ul {
-      display: flex;
-      justify-content: flex-end;
-      @include max-screen(414px) {
-        flex-direction: column;
-      }
+    .navbar-brand {
+      padding: 25px 0 0 5px;
+    }
 
+    .navbar-nav {
       li {
-        font-size: 16px;
-        font-family: $font_1;
-        text-transform: uppercase;
-        margin-left: 40px;
-
         a {
-          color: #4d4d4d;
+          font-size: 16px;
+          font-family: $font_1;
+          text-transform: uppercase;
+          padding: 32px 0 0 40px;
 
           &:after {
             display: block;
@@ -92,10 +91,6 @@ $font_3: font-family, 'Lato';
             background-color: #4d4d4d;
             transition: 0.2s;
           }
-
-          //&:hover{
-          //  text-transform: capitalize;
-          //}
         }
 
         &:hover {
@@ -105,8 +100,13 @@ $font_3: font-family, 'Lato';
         }
       }
     }
-
   }
+}
+
+.bg_top {
+  background-image: url("../images/bg_top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 
 
   .connection {
@@ -216,10 +216,13 @@ $font_3: font-family, 'Lato';
   }
 }
 
+
 article {
   background-color: #f6f6f6;
   text-align: center;
+
 }
+
 
 .services {
   padding: 117px 15px 30px 15px;
@@ -274,17 +277,316 @@ article {
   }
 }
 
-.skills{
+.skills {
   padding: 117px 15px 124px 15px;
   text-align: center;
-  h3{
+
+  h3 {
     @include h3;
     padding-bottom: 62px;
   }
-  img{
+
+  img {
     width: 100%;
   }
 }
 
+.portfolio {
+  padding: 126px 15px 123px 15px;
+
+  h3 {
+    @include h3;
+    padding-bottom: 46px;
+  }
+
+
+  .item {
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+
+      &:hover {
+        box-shadow: 0 0 28px 0 rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+
+
+  .portfolio-btn {
+    display: inline-block;
+    font-family: $font_1;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #4d4d4d;
+    border: solid 1px #4d4d4d;
+    width: 190px;
+    line-height: 50px;
+
+    &:hover {
+      background-color: white;
+      border: solid 1px #ffffff;
+      box-shadow: -3px 17px 44px -5px rgba(5, 5, 5, 0.51);
+      transition-delay: .1s;
+    }
+  }
+}
+
+.slick {
+  padding-top: 126px;
+  padding-bottom: 122px;
+
+  h3 {
+    @include h3;
+    margin-bottom: 58px;
+    @include max-screen(414px) {
+      font-size: 30px;
+    }
+  }
+
+  .slider {
+    .row {
+      padding: 80px 15px 0 15px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    position: relative;
+
+    .slick-track {
+      display: flex;
+    }
+
+    .slick-list {
+      overflow: hidden;
+    }
+
+    .slick-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+
+      li {
+        margin: 6px;
+      }
+
+      button {
+        font-size: 0;
+        width: 13px;
+        height: 13px;
+        border: solid 1px #212121;
+        background-color: transparent;
+      }
+
+      .slick-active {
+        button {
+          color: transparent;
+          background-color: #212121;
+        }
+      }
+    }
+
+    border: solid 1px #212121;
+
+    h4 {
+      font-family: $font_1;
+      font-weight: 500;
+      font-size: 30px;
+      color: #373737;
+      text-transform: uppercase;
+    }
+
+    h5 {
+      font-family: $font_1;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #212121;
+      padding: 10px 0 22px 0;
+    }
+
+    p {
+      font-family: $font_1;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: rgba(33, 33, 33, .60);
+
+    }
+  }
+}
+
+.level {
+  padding-top: 52px;
+  padding-bottom: 66px;
+  @include max-screen(360px) {
+    width: 93%;
+  }
+
+  img {
+    padding-bottom: 31px;
+  }
+
+  p {
+    font-family: $font_1;
+    font-weight: 500;
+    font-size: 30px;
+    color: #363636;
+  }
+
+  h4 {
+    font-family: $font_1;
+    font-size: 22px;
+    color: #363636;
+    @include max-screen(414px) {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+footer {
+  background-image: url("../images/footer_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 148px 0 38px 0;
+  margin-top: 155px;
+  @include max-screen(414px) {
+    margin-top: 0;
+  }
+
+  .container {
+    h3 {
+      @include h3;
+      color: #f0f0f0;
+
+      &:before {
+        content: "";
+        background-color: #c1c1c1;
+      }
+
+      margin-bottom: 71px;
+    }
+
+    form {
+      .form-group {
+        margin-bottom: 30px;
+
+        .form-control {
+          border-radius: 0;
+          background-color: white;
+          line-height: 57px;
+          font-size: 16px;
+          color: #212121;
+          font-family: $font_1;
+
+        }
+      }
+
+      textarea {
+        &.form-control {
+          height: 207px;
+          resize: none;
+        }
+      }
+
+      .btn {
+        color: #4d4d4d;
+        font-family: $font_1;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+        background-color: white;
+        border-radius: 0;
+        line-height: 40px;
+        min-width: 123px;
+        border: none;
+        margin-bottom: 58px;
+
+        &:focus {
+          background-color: #D1CDC3;
+        }
+
+        &:hover {
+          box-shadow: -3px 17px 44px -5px rgba(5, 5, 5, 0.51);
+          transition: 0.2s;
+        }
+
+        img {
+          padding: 0 0 2px 7px;
+        }
+      }
+    }
+
+    .social {
+      display: inline-block;
+      margin-top: 34px;
+
+      a {
+        display: inline-block;
+        margin-right: 5px;
+        width: 27px;
+        line-height: 27px;
+        background-color: white;
+        font-size: 16px;
+        text-align: center;
+        color: #4d4d4d;
+
+        &:hover {
+          color: white;
+          background-color: #0084b4;
+          transition: 0.2s;
+        }
+      }
+    }
+
+    h4 {
+      display: inline-block;
+      font-family: $font_2;
+      font-size: 16px;
+      color: white;
+      margin-top: 34px;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: white;
+      position: relative;
+      bottom: 60px;
+      @include max-screen(414px) {
+        bottom: 100px;
+      }
+    }
+
+    @include max-screen(414px) {
+      text-align: center;
+    }
+  }
+
+  position: relative;
+
+  .btn-up {
+    line-height: 45px;
+    width: 45px;
+    text-align: center;
+    background-color: white;
+    font-family: 'Font Awesome 5 Free', serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: #4d4d4d;
+    position: absolute;
+    right: 30px;
+    bottom: 193px;
+
+    &:hover {
+      box-shadow: -3px 17px 44px -5px rgba(5, 5, 5, 0.51);
+      transition: 0.2s;
+    }
+  }
+}
 
 

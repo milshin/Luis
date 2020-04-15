@@ -1,18 +1,13 @@
 @import url(../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css);
-@import url(../css/bootstrap-theme.css);
 @import url(../css/bootstrap.min.css);
-* {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-decoration: none;
-  outline: none;
-  box-sizing: border-box; }
-  * p, * h1, * h2, * h3, * h4, * h5, * h6 {
-    margin: 0; }
-  * a:hover {
-    text-decoration: none; }
-
+@import url(../css/bootstrap-theme.css);
+@import url(slick.css);
+@font-face {
+  font-family: 'Asap';
+  src: url("../fonts/Asap-Italic.eot");
+  src: url("../fonts/Asap-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Asap-Italic.woff2") format("woff2"), url("../fonts/Asap-Italic.woff") format("woff"), url("../fonts/Asap-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
 @font-face {
   font-family: 'Asap';
   src: url("../fonts/Asap-Bold.eot");
@@ -49,37 +44,47 @@
   src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype"), url("../fonts/Lato-Regular.svg#Lato-Regular") format("svg");
   font-weight: normal;
   font-style: normal; }
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box; }
+  * p, * h1, * h2, * h3, * h4, * h5, * h6 {
+    margin: 0; }
+  * a:hover {
+    text-decoration: none; }
+
+header .navbar-default {
+  background-image: none;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  -webkit-box-shadow: none; }
+  header .navbar-default .navbar-collapse {
+    border-top: none; }
+  header .navbar-default .navbar-brand {
+    padding: 25px 0 0 5px; }
+  header .navbar-default .navbar-nav li a {
+    font-size: 16px;
+    font-family: font-family, "Asap";
+    text-transform: uppercase;
+    padding: 32px 0 0 40px; }
+    header .navbar-default .navbar-nav li a:after {
+      display: block;
+      content: "";
+      width: 0;
+      height: 2px;
+      margin-top: 8px;
+      background-color: #4d4d4d;
+      transition: 0.2s; }
+  header .navbar-default .navbar-nav li:hover a:after {
+    width: 100%; }
+
 .bg_top {
   background-image: url("../images/bg_top.png");
   background-repeat: no-repeat;
   background-size: cover; }
-  .bg_top .logo {
-    padding-top: 31px; }
-  .bg_top .menu {
-    padding-top: 32px; }
-    .bg_top .menu ul {
-      display: flex;
-      justify-content: flex-end; }
-      @media screen and (max-width: 414px) {
-        .bg_top .menu ul {
-          flex-direction: column; } }
-      .bg_top .menu ul li {
-        font-size: 16px;
-        font-family: font-family, "Asap";
-        text-transform: uppercase;
-        margin-left: 40px; }
-        .bg_top .menu ul li a {
-          color: #4d4d4d; }
-          .bg_top .menu ul li a:after {
-            display: block;
-            content: "";
-            width: 0;
-            height: 2px;
-            margin-top: 8px;
-            background-color: #4d4d4d;
-            transition: 0.2s; }
-        .bg_top .menu ul li:hover a:after {
-          width: 100%; }
   .bg_top .connection {
     padding-top: 177px; }
     @media screen and (max-width: 768px) {
@@ -178,6 +183,7 @@ article {
     letter-spacing: 6px;
     font-weight: 700;
     font-size: 46px;
+    text-transform: uppercase;
     color: #717171;
     padding-bottom: 71px; }
     .services h3:before {
@@ -222,6 +228,7 @@ article {
     letter-spacing: 6px;
     font-weight: 700;
     font-size: 46px;
+    text-transform: uppercase;
     color: #717171;
     padding-bottom: 62px; }
     .skills h3:before {
@@ -233,5 +240,246 @@ article {
       background-color: #717171; }
   .skills img {
     width: 100%; }
+
+.portfolio {
+  padding: 126px 15px 123px 15px; }
+  .portfolio h3 {
+    display: inline-block;
+    font-family: font-family, "Asap";
+    letter-spacing: 6px;
+    font-weight: 700;
+    font-size: 46px;
+    text-transform: uppercase;
+    color: #717171;
+    padding-bottom: 46px; }
+    .portfolio h3:before {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 60px;
+      margin: auto;
+      background-color: #717171; }
+  .portfolio .item {
+    margin-bottom: 30px; }
+    .portfolio .item img {
+      width: 100%; }
+      .portfolio .item img:hover {
+        box-shadow: 0 0 28px 0 rgba(0, 0, 0, 0.75); }
+  .portfolio .portfolio-btn {
+    display: inline-block;
+    font-family: font-family, "Asap";
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #4d4d4d;
+    border: solid 1px #4d4d4d;
+    width: 190px;
+    line-height: 50px; }
+    .portfolio .portfolio-btn:hover {
+      background-color: white;
+      border: solid 1px #ffffff;
+      box-shadow: -3px 17px 44px -5px rgba(5, 5, 5, 0.51);
+      transition-delay: .1s; }
+
+.slick {
+  padding-top: 126px;
+  padding-bottom: 122px; }
+  .slick h3 {
+    display: inline-block;
+    font-family: font-family, "Asap";
+    letter-spacing: 6px;
+    font-weight: 700;
+    font-size: 46px;
+    text-transform: uppercase;
+    color: #717171;
+    margin-bottom: 58px; }
+    .slick h3:before {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 60px;
+      margin: auto;
+      background-color: #717171; }
+    @media screen and (max-width: 414px) {
+      .slick h3 {
+        font-size: 30px; } }
+  .slick .slider {
+    position: relative;
+    border: solid 1px #212121; }
+    .slick .slider .row {
+      padding: 80px 15px 0 15px; }
+      .slick .slider .row img {
+        width: 100%; }
+    .slick .slider .slick-track {
+      display: flex; }
+    .slick .slider .slick-list {
+      overflow: hidden; }
+    .slick .slider .slick-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px; }
+      .slick .slider .slick-dots li {
+        margin: 6px; }
+      .slick .slider .slick-dots button {
+        font-size: 0;
+        width: 13px;
+        height: 13px;
+        border: solid 1px #212121;
+        background-color: transparent; }
+      .slick .slider .slick-dots .slick-active button {
+        color: transparent;
+        background-color: #212121; }
+    .slick .slider h4 {
+      font-family: font-family, "Asap";
+      font-weight: 500;
+      font-size: 30px;
+      color: #373737;
+      text-transform: uppercase; }
+    .slick .slider h5 {
+      font-family: font-family, "Asap";
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #212121;
+      padding: 10px 0 22px 0; }
+    .slick .slider p {
+      font-family: font-family, "Asap";
+      font-size: 15px;
+      text-transform: uppercase;
+      color: rgba(33, 33, 33, 0.6); }
+
+.level {
+  padding-top: 52px;
+  padding-bottom: 66px; }
+  @media screen and (max-width: 360px) {
+    .level {
+      width: 93%; } }
+  .level img {
+    padding-bottom: 31px; }
+  .level p {
+    font-family: font-family, "Asap";
+    font-weight: 500;
+    font-size: 30px;
+    color: #363636; }
+  .level h4 {
+    font-family: font-family, "Asap";
+    font-size: 22px;
+    color: #363636; }
+    @media screen and (max-width: 414px) {
+      .level h4 {
+        padding-bottom: 20px; } }
+
+footer {
+  background-image: url("../images/footer_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 148px 0 38px 0;
+  margin-top: 155px;
+  position: relative; }
+  @media screen and (max-width: 414px) {
+    footer {
+      margin-top: 0; } }
+  footer .container h3 {
+    display: inline-block;
+    font-family: font-family, "Asap";
+    letter-spacing: 6px;
+    font-weight: 700;
+    font-size: 46px;
+    text-transform: uppercase;
+    color: #717171;
+    color: #f0f0f0;
+    margin-bottom: 71px; }
+    footer .container h3:before {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 60px;
+      margin: auto;
+      background-color: #717171; }
+    footer .container h3:before {
+      content: "";
+      background-color: #c1c1c1; }
+  footer .container form .form-group {
+    margin-bottom: 30px; }
+    footer .container form .form-group .form-control {
+      border-radius: 0;
+      background-color: white;
+      line-height: 57px;
+      font-size: 16px;
+      color: #212121;
+      font-family: font-family, "Asap"; }
+  footer .container form textarea.form-control {
+    height: 207px;
+    resize: none; }
+  footer .container form .btn {
+    color: #4d4d4d;
+    font-family: font-family, "Asap";
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color: white;
+    border-radius: 0;
+    line-height: 40px;
+    min-width: 123px;
+    border: none;
+    margin-bottom: 58px; }
+    footer .container form .btn:focus {
+      background-color: #D1CDC3; }
+    footer .container form .btn:hover {
+      box-shadow: -3px 17px 44px -5px rgba(5, 5, 5, 0.51);
+      transition: 0.2s; }
+    footer .container form .btn img {
+      padding: 0 0 2px 7px; }
+  footer .container .social {
+    display: inline-block;
+    margin-top: 34px; }
+    footer .container .social a {
+      display: inline-block;
+      margin-right: 5px;
+      width: 27px;
+      line-height: 27px;
+      background-color: white;
+      font-size: 16px;
+      text-align: center;
+      color: #4d4d4d; }
+      footer .container .social a:hover {
+        color: white;
+        background-color: #0084b4;
+        transition: 0.2s; }
+  footer .container h4 {
+    display: inline-block;
+    font-family: font-family, "Montserrat Alternates";
+    font-size: 16px;
+    color: white;
+    margin-top: 34px; }
+  footer .container:after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: white;
+    position: relative;
+    bottom: 60px; }
+    @media screen and (max-width: 414px) {
+      footer .container:after {
+        bottom: 100px; } }
+  @media screen and (max-width: 414px) {
+    footer .container {
+      text-align: center; } }
+  footer .btn-up {
+    line-height: 45px;
+    width: 45px;
+    text-align: center;
+    background-color: white;
+    font-family: 'Font Awesome 5 Free', serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: #4d4d4d;
+    position: absolute;
+    right: 30px;
+    bottom: 193px; }
+    footer .btn-up:hover {
+      box-shadow: -3px 17px 44px -5px rgba(5, 5, 5, 0.51);
+      transition: 0.2s; }
 
 /*# sourceMappingURL=style.css.map */
